@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Virtuelles Klassenzimmer – Blockwoche 1: Trinkwasser verstehen">
+  <title>Virtuelles Klassenzimmer – Trinkwasser</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="drop">💧</div>
+      <div>
+        <strong>Wasser-Lernportal</strong>
+        <small>Blockwoche 1</small>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-page="start">🏠 <span>Start</span></button>
+      <button class="nav-btn" data-page="wochenplan">🗓️ <span>Wochenplan</span></button>
+      <button class="nav-btn" data-page="lernmodule">📘 <span>Lernmodule</span></button>
+      <button class="nav-btn" data-page="materialien">📁 <span>Materialien</span></button>
+      <button class="nav-btn" data-page="interaktionen">🧩 <span>Interaktive Übungen</span></button>
+      <button class="nav-btn" data-page="quiz">🏆 <span>Quiz</span></button>
+      <button class="nav-btn" data-page="fortschritt">📊 <span>Fortschritt</span></button>
+    </nav>
+
+    <div class="side-note">
+      <strong>Dein Lernweg</strong>
+      <p>Info lesen → ausprobieren → prüfen → Fortschritt sichern.</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1>Virtuelles Klassenzimmer</h1>
+        <p>Blockwoche 1 · Trinkwasser verstehen</p>
+      </div>
+      <span class="status-pill" id="statusPill">0 / 6 Module abgeschlossen</span>
+    </header>
+
+    <!-- START -->
+    <section class="page active" id="page-start">
+      <div class="hero card">
+        <div class="hero-copy">
+          <span class="eyebrow">Willkommen</span>
+          <h2>Lernen, entdecken, üben – alles an einem Ort.</h2>
+          <p>Diese Homepage orientiert sich an deiner Abbildung. Alle Menüpunkte links sind echte Bereiche mit eigenem Inhalt.</p>
+          <div class="actions">
+            <button class="primary" data-page-jump="lernmodule">Lernmodule öffnen</button>
+            <button class="secondary" data-page-jump="wochenplan">Wochenplan ansehen</button>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div><strong>6</strong><span>Module</span></div>
+          <div><strong>6</strong><span>Interaktionen</span></div>
+          <div><strong>1</strong><span>Wissenstest</span></div>
+        </div>
+      </div>
+
+      <div class="card visual-card">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Abbildung</span>
+            <h2>Dein virtuelles Klassenzimmer</h2>
+          </div>
+          <span class="muted">Die Homepage darunter setzt diese Darstellung funktional um.</span>
+        </div>
+        <img class="overview-image" src="assets/klassenzimmer-vorlage.png" alt="Vorlage des virtuellen Klassenzimmers">
+      </div>
+
+      <div class="grid3">
+        <article class="mini card">
+          <h3>🎯 Lernziele</h3>
+          <p>Eigenschaften von Wasser verstehen, Trinkwasseraufbereitung erklären sowie Härte, pH und TOC einordnen.</p>
+        </article>
+        <article class="mini card">
+          <h3>💡 Merksätze</h3>
+          <p>Kurze Kernbotschaften fassen jede Lerneinheit zusammen und helfen beim Wiederholen.</p>
+        </article>
+        <article class="mini card">
+          <h3>🧩 Aktiv lernen</h3>
+          <p>Quiz, Drag & Drop, Hotspots, Karteikarten, Lückentext und Selbstcheck.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WOCHENPLAN -->
+    <section class="page" id="page-wochenplan">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Blockwoche 1</span>
+          <h2>Wochenplan</h2>
+        </div>
+        <button class="secondary" id="resetProgress">Fortschritt zurücksetzen</button>
+      </div>
+
+      <div class="timeline">
+        <article class="day">
+          <span class="day-number">1</span>
+          <div>
+            <h3>Grundlagen Wasser & Trinkwasser</h3>
+            <p>Eigenschaften von Wasser, Bedeutung für Mensch und Umwelt, Herkunft des Trinkwassers und erste Aufbereitungsschritte.</p>
+            <div class="actions">
+              <button class="text-button" data-module-open="1">Grundlagen öffnen →</button>
+              <button class="text-button" data-module-open="2">Trinkwasser öffnen →</button>
+            </div>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-number">2</span>
+          <div>
+            <h3>Wasserhärte</h3>
+            <p>Calcium, Magnesium, Kalkbildung und Folgen für Haushalt und Technik.</p>
+            <button class="text-button" data-module-open="3">Modul öffnen →</button>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-number">3</span>
+          <div>
+            <h3>pH-Wert</h3>
+            <p>Sauer, neutral oder basisch? Die pH-Skala verstehen und Werte richtig einordnen.</p>
+            <button class="text-button" data-module-open="4">Modul öffnen →</button>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-number">4</span>
+          <div>
+            <h3>TOC-Wert</h3>
+            <p>Organische Stoffe im Wasser und ihre Bedeutung für die Wasserqualität.</p>
+            <button class="text-button" data-module-open="5">Modul öffnen →</button>
+          </div>
+        </article>
+        <article class="day">
+          <span class="day-number">5</span>
+          <div>
+            <h3>Üben & Wissenstest</h3>
+            <p>Wiederholen, anwenden, Wissen prüfen und die Blockwoche abschließen.</p>
+            <button class="text-button" data-module-open="6">Modul öffnen →</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- LERNMODULE -->
+    <section class="page" id="page-lernmodule">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Lernen</span>
+          <h2>Lernmodule</h2>
+        </div>
+        <span class="muted">Wähle ein Thema. Jede Einheit hat Info, Merksatz und Aufgabe.</span>
+      </div>
+
+      <div class="module-tabs">
+        <button class="module-tab active" data-module-tab="1">1 Grundlagen</button>
+        <button class="module-tab" data-module-tab="2">2 Trinkwasser</button>
+        <button class="module-tab" data-module-tab="3">3 Wasserhärte</button>
+        <button class="module-tab" data-module-tab="4">4 pH-Wert</button>
+        <button class="module-tab" data-module-tab="5">5 TOC-Wert</button>
+        <button class="module-tab" data-module-tab="6">6 Übungen</button>
+      </div>
+
+      <div class="card module-content" id="moduleContent"></div>
+    </section>
+
+    <!-- MATERIALIEN -->
+    <section class="page" id="page-materialien">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">PDFs & Downloads</span>
+          <h2>Materialien</h2>
+        </div>
+        <span class="muted">PDFs lassen sich aus GitHub Pages direkt öffnen.</span>
+      </div>
+
+      <div class="grid2">
+        <article class="card">
+          <h3>📄 Materialien im Repository</h3>
+          <p>Lege die PDF-Dateien im Ordner <code>pdf/</code> ab. Diese Links funktionieren, sobald die Dateinamen vorhanden sind.</p>
+          <div class="file-list">
+            <a href="pdf/arbeitsblatt-blockwoche1.pdf" target="_blank">📄 Arbeitsblatt Blockwoche 1 <span>Öffnen ↗</span></a>
+            <a href="pdf/glossar-trinkwasser.pdf" target="_blank">📘 Glossar Trinkwasser <span>Öffnen ↗</span></a>
+            <a href="pdf/experiment-wasserhaerte.pdf" target="_blank">🧪 Experiment Wasserhärte <span>Öffnen ↗</span></a>
+            <a href="pdf/merkkarte.pdf" target="_blank">🗂️ Merkkarte <span>Öffnen ↗</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>📤 PDF lokal auswählen</h3>
+          <p>Damit kannst du im Browser testen, wie eine PDF dargestellt wird. Die Datei wird nicht ins Internet hochgeladen.</p>
+          <label class="upload-box">
+            <input id="pdfPicker" type="file" accept="application/pdf">
+            <strong>PDF auswählen</strong>
+            <span>zum lokalen Anzeigen</span>
+          </label>
+          <div id="pdfPreviewWrap" class="pdf-preview-wrap hidden">
+            <div class="preview-head">
+              <strong id="pdfName">PDF</strong>
+              <button class="secondary" id="closePdf">Vorschau schließen</button>
+            </div>
+            <iframe id="pdfPreview" title="PDF-Vorschau"></iframe>
+          </div>
+        </article>
+      </div>
+
+      <article class="card info-callout">
+        <h3>So kommen PDFs dauerhaft auf deine GitHub-Seite</h3>
+        <ol>
+          <li>Im Repository einen Ordner <code>pdf</code> anlegen.</li>
+          <li>Auf <strong>Add file → Upload files</strong> klicken.</li>
+          <li>PDF hineinziehen und committen.</li>
+          <li>Im HTML mit <code>href="pdf/deine-datei.pdf"</code> verlinken.</li>
+        </ol>
+        <p><strong>Wichtig:</strong> Auf einer normalen statischen GitHub-Pages-Seite können Schülerinnen und Schüler Dateien nicht dauerhaft auf den Server hochladen. Dafür bräuchtest du zusätzlich einen Upload-Dienst oder ein Backend.</p>
+      </article>
+    </section>
+
+    <!-- INTERAKTIONEN -->
+    <section class="page" id="page-interaktionen">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Aktiv lernen</span>
+          <h2>Interaktive Übungen</h2>
+        </div>
+        <span class="muted">Alles funktioniert direkt im Browser.</span>
+      </div>
+
+      <div class="interaction-grid">
+        <button class="activity" data-activity="quiz"><span>💡</span><strong>Mini-Quiz</strong><small>Kurze Wissensfrage</small></button>
+        <button class="activity" data-activity="drag"><span>🧩</span><strong>Drag & Drop</strong><small>Begriffe zuordnen</small></button>
+        <button class="activity" data-activity="hotspot"><span>🖼️</span><strong>Hotspot-Bild</strong><small>Aufbereitung entdecken</small></button>
+        <button class="activity" data-activity="cards"><span>🃏</span><strong>Karteikarten</strong><small>Umdrehen & merken</small></button>
+        <button class="activity" data-activity="gap"><span>📝</span><strong>Lückentext</strong><small>Wissen anwenden</small></button>
+        <button class="activity" data-activity="check"><span>☑️</span><strong>Selbstcheck</strong><small>Lernstand prüfen</small></button>
+      </div>
+
+      <div class="card interaction-stage" id="interactionStage">
+        <h3>Wähle eine Interaktion.</h3>
+        <p>Die Aufgabe erscheint anschließend hier.</p>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="page" id="page-quiz">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Abschluss</span>
+          <h2>Wissenstest</h2>
+        </div>
+        <span class="muted">5 Fragen · direkte Auswertung</span>
+      </div>
+      <div class="card" id="finalQuiz"></div>
+    </section>
+
+    <!-- FORTSCHRITT -->
+    <section class="page" id="page-fortschritt">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Dein Stand</span>
+          <h2>Lernfortschritt</h2>
+        </div>
+        <span class="muted">Der Fortschritt wird lokal im Browser gespeichert.</span>
+      </div>
+      <div class="card">
+        <div class="progress-grid" id="progressGrid"></div>
+      </div>
+      <div class="grid3">
+        <article class="card mini"><h3>Leicht</h3><p>Grundwissen verstehen und wichtige Begriffe kennen.</p></article>
+        <article class="card mini"><h3>Mittel</h3><p>Zusammenhänge erkennen und Messwerte einordnen.</p></article>
+        <article class="card mini"><h3>Schwer / Profi</h3><p>Wissen anwenden, beurteilen und begründen.</p></article>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
